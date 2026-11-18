@@ -1,13 +1,23 @@
 #!/usr/bin/env python3
 """Build RSS feeds from MDBList lists.
 
-Reads feeds.json ({"name": "list URL", ...}), fetches each list's JSON
-(<list URL>/json), tracks when each item was first seen in state/<name>.json,
-and writes feeds/<name>.xml. pubDate = first-seen time, so new additions
-surface as new items in any RSS reader.
+feeds.json maps a feed name to an MDBList list URL. For each list:
+  - <list>/json gives the list membership (IMDb ids).
+  - The list's HTML page (plus its infinite-scroll pages) gives poster,
+    synopsis, IMDb rating/votes, other ratings and the TMDb id.
+  - If the TMDB_TOKEN env var is set (TMDb API Read Access Token), the
+    digital release date is looked up via TMDb's release_dates endpoint.
+State:
+  state/<name>.json       first-seen time per item (used as pubDate)
+  state/<name>.meta.json  cached metadata per item
+Output: feeds/<name>.xml (RSS 2.0 + Media RSS for posters).
 """
+import html
 import json
+import os
+import re
 import sys
+import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime
@@ -16,103 +26,262 @@ from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).parent
 MAX_ITEMS = 200
-UA = "Mozilla/5.0 (mdblist-rss; +https://github.com)"
+MAX_PAGES = 15
+UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/131.0 Safari/537.36")
+TMDB_TOKEN = os.environ.get("TMDB_TOKEN", "").strip()
+TMDB_RECHECK = timedelta(hours=24)   # re-ask TMDb for items with no digital date yet
+DATE_FMT = "%a, %d %b %Y %H:%M:%S %z"
 
 
-def fetch_items(list_url: str) -> list[dict]:
-    url = list_url.rstrip("/") + "/json"
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+def get(url: str, headers: dict | None = None) -> bytes:
+    req = urllib.request.Request(url, headers={"User-Agent": UA, **(headers or {})})
     with urllib.request.urlopen(req, timeout=60) as r:
-        data = json.load(r)
-    if isinstance(data, dict):  # tolerate {"movies": [...], "shows": [...]} shapes
+        return r.read()
+
+
+# ---------------------------------------------------------------- MDBList
+
+def fetch_members(list_url: str) -> list[dict]:
+    data = json.loads(get(list_url.rstrip("/") + "/json", {"Accept": "application/json"}))
+    if isinstance(data, dict):
         data = [i for v in data.values() if isinstance(v, list) for i in v]
     return data
 
 
-def item_key(it: dict) -> str:
-    return str(it.get("imdb_id") or it.get("id") or it.get("tmdb_id") or it.get("title"))
+def _txt(s: str | None) -> str | None:
+    if s is None:
+        return None
+    s = html.unescape(re.sub(r"<[^>]+>", "", s)).strip()
+    return s or None
 
 
-def item_link(it: dict, list_url: str) -> str:
-    if it.get("imdb_id"):
-        return f"https://www.imdb.com/title/{it['imdb_id']}/"
-    return list_url
+def parse_cards(page: str) -> dict[str, dict]:
+    """Return {imdb_id: card metadata} for every card in an HTML page/fragment."""
+    out = {}
+    for c in re.split(r'<div class="card" data-media-id=', page)[1:]:
+        d: dict = {"mediatype": (re.search(r'data-mediatype="(\w+)"', c) or [None, None])[1]}
+        m = re.search(r'<img[^>]*poster-card[^>]*src="([^"]+)"', c)
+        d["poster"] = m and m.group(1).replace("/w200/", "/w500/")
+        m = re.search(r'class="idscore"[^>]*>\s*([^<]*?)\s*<', c)
+        d["mdb_score"] = m.group(1) if m and m.group(1) not in ("?", "") else None
+        m = re.search(r'movie-title" title="([^"]+)"', c)
+        d["title"] = m and html.unescape(m.group(1))
+        m = re.search(r'collapsible-description"[^>]*>(.*?)</div>', c, re.S)
+        d["synopsis"] = _txt(m and m.group(1))
+        ratings = {}
+        for g in re.finditer(
+            r'<a\s+href="([^"]+)"[^>]*>([^<]+)</a></div>'
+            r'(?:<div class="three wide column idtext">\s*([^<]*?)\s*</div>)?'
+            r'(?:<div class="one wide column idsmall">/?([^<]*?)/?</div>)?', c):
+            ratings[g.group(2).strip()] = {
+                "url": g.group(1), "rating": g.group(3) or None, "votes": g.group(4) or None}
+        d["ratings"] = ratings
+        imdb = re.search(r"tt\d+", ratings.get("IMDb", {}).get("url", ""))
+        tmdb = re.search(r"themoviedb\.org/(movie|tv)/(\d+)", ratings.get("TMDb", {}).get("url", ""))
+        d["tmdb"] = tmdb and f"{tmdb.group(1)}/{tmdb.group(2)}"
+        if imdb:
+            out[imdb.group()] = d
+    return out
 
 
-def build(name: str, list_url: str) -> bool:
+def fetch_cards(list_url: str, wanted: set[str]) -> dict[str, dict]:
+    cards = parse_cards(get(list_url).decode("utf-8", "replace"))
+    for page in range(1, MAX_PAGES):
+        if wanted <= cards.keys():
+            break
+        q = urllib.parse.urlencode({
+            "append": "yes", "filter": "", "new_items": "false", "show_hidden": "false",
+            "item_filter": "", "mediatype": "", "sort": "", "sortorder": "",
+            "q_current_page": page})
+        try:
+            frag = get(f"{list_url}?{q}", {"X-Requested-With": "XMLHttpRequest",
+                                           "Referer": list_url}).decode("utf-8", "replace")
+        except Exception as e:
+            print(f"  page {page}: {e}", file=sys.stderr)
+            break
+        new = parse_cards(frag)
+        if not new or new.keys() <= cards.keys():
+            break
+        cards.update(new)
+    print(f"  cards scraped: {len(cards)} (of {len(wanted)} on list)")
+    return cards
+
+
+# ---------------------------------------------------------------- TMDb
+
+def tmdb_digital(tmdb: str) -> dict | None:
+    """Earliest digital (type 4) release; prefers US, then IN, then earliest anywhere."""
+    kind, tid = tmdb.split("/")
+    if kind != "movie":
+        return None
+    data = json.loads(get(f"https://api.themoviedb.org/3/movie/{tid}/release_dates",
+                          {"Authorization": f"Bearer {TMDB_TOKEN}", "Accept": "application/json"}))
+    found = {}
+    for r in data.get("results", []):
+        dates = [x["release_date"][:10] for x in r.get("release_dates", []) if x.get("type") == 4]
+        if dates:
+            found[r["iso_3166_1"]] = min(dates)
+    if not found:
+        return None
+    for c in ("US", "IN"):
+        if c in found:
+            return {"date": found[c], "country": c}
+    c = min(found, key=found.get)
+    return {"date": found[c], "country": c}
+
+
+def enrich_tmdb(meta: dict) -> int:
+    if not TMDB_TOKEN:
+        return 0
+    now = datetime.now(timezone.utc)
+    n = 0
+    for k, m in meta.items():
+        if not m.get("tmdb") or m.get("digital"):
+            continue
+        checked = m.get("digital_checked")
+        if checked and now - datetime.fromisoformat(checked) < TMDB_RECHECK:
+            continue
+        try:
+            m["digital"] = tmdb_digital(m["tmdb"])
+            m["digital_checked"] = now.isoformat(timespec="seconds")
+            n += 1
+        except Exception as e:
+            print(f"  TMDb {k}: {e}", file=sys.stderr)
+    return n
+
+
+# ---------------------------------------------------------------- feed
+
+def fmt_votes(v: str | None) -> str:
+    try:
+        n = int(v.replace(",", ""))
+    except (AttributeError, ValueError):
+        return ""
+    return f" ({n/1000:.1f}k votes)" if n >= 1000 else f" ({n} votes)"
+
+
+def item_xml(k: str, it: dict, m: dict, pub: str, list_url: str) -> str:
+    year = it.get("release_year")
+    base_title = m.get("title") or (f"{it.get('title', 'Untitled')}" + (f" ({year})" if year else ""))
+    imdb = m.get("ratings", {}).get("IMDb", {})
+    imdb_rating = imdb.get("rating")
+    dig = m.get("digital")
+
+    title = base_title + (f" — IMDb {imdb_rating}" if imdb_rating else "")
+    link = f"https://www.imdb.com/title/{k}/"
+
+    facts = []
+    if imdb_rating:
+        facts.append(f"<b>IMDb:</b> {escape(imdb_rating)}{escape(fmt_votes(imdb.get('votes')))}")
+    elif "ratings" in m:  # scraped, but IMDb has no rating yet
+        facts.append("<b>IMDb:</b> not rated yet")
+    if dig:
+        facts.append(f"<b>Digital release:</b> {escape(dig['date'])} ({escape(dig['country'])})")
+    elif m.get("digital_checked"):
+        facts.append("<b>Digital release:</b> not announced")
+    others = []
+    for src, label in (("Letterboxd", "Letterboxd"), ("Tomatoes", "RT"),
+                       ("Metacritic", "MC"), ("Trakt", "Trakt")):
+        r = m.get("ratings", {}).get(src, {}).get("rating")
+        if r:
+            others.append(f"{label} {r}{'%' if src == 'Tomatoes' else ''}")
+    if others:
+        facts.append("<b>Other:</b> " + escape(" · ".join(others)))
+
+    body = ""
+    if m.get("poster"):
+        body += f'<p><img src="{escape(m["poster"])}" alt="poster" width="200"/></p>'
+    if facts:
+        body += "<p>" + "<br/>".join(facts) + "</p>"
+    if m.get("synopsis"):
+        body += f"<p>{escape(m['synopsis'])}</p>"
+    links = [f'<a href="{escape(v["url"])}">{escape(s)}</a>'
+             for s, v in m.get("ratings", {}).items() if v.get("url")]
+    if links:
+        body += "<p>" + " · ".join(links) + "</p>"
+
+    media = ""
+    if m.get("poster"):
+        p = escape(m["poster"])
+        media = (f'      <media:content url="{p}" medium="image" type="image/jpeg"/>\n'
+                 f'      <media:thumbnail url="{p}"/>\n'
+                 f'      <enclosure url="{p}" type="image/jpeg" length="0"/>\n')
+    return (
+        "    <item>\n"
+        f"      <title>{escape(title)}</title>\n"
+        f"      <link>{escape(link)}</link>\n"
+        f'      <guid isPermaLink="false">{escape(k)}</guid>\n'
+        f"      <pubDate>{pub}</pubDate>\n"
+        + media +
+        f"      <description><![CDATA[{body.replace(']]>', ']]&gt;')}]]></description>\n"
+        "    </item>"
+    )
+
+
+def build(name: str, list_url: str) -> None:
     state_path = ROOT / "state" / f"{name}.json"
+    meta_path = ROOT / "state" / f"{name}.meta.json"
     feed_path = ROOT / "feeds" / f"{name}.xml"
     state = json.loads(state_path.read_text()) if state_path.exists() else {}
+    meta = json.loads(meta_path.read_text()) if meta_path.exists() else {}
 
-    items = fetch_items(list_url)
-    if not items:
-        print(f"[{name}] list returned no items; leaving feed unchanged", file=sys.stderr)
-        return False
+    print(f"[{name}]")
+    members = fetch_members(list_url)
+    if not members:
+        print("  list returned no items; leaving feed unchanged", file=sys.stderr)
+        return
+    by_key = {str(it.get("imdb_id") or it.get("id")): it for it in members}
 
+    # first-seen dates
     now_dt = datetime.now(timezone.utc)
-    now = format_datetime(now_dt)
-    # Drop the old 1970 placeholder dates so they get re-stamped below.
     legacy = [k for k, v in state.items() if v.startswith("Thu, 01 Jan 1970")]
     for k in legacy:
         del state[k]
-    backlog = not state  # first run (or migrating from placeholder dates)
-    changed = bool(legacy)
-    for i, it in enumerate(items):
-        k = item_key(it)
+    backlog = not state
+    new_keys = []
+    for i, k in enumerate(by_key):
         if k not in state:
-            if backlog:
-                # Initial backlog: stamp with the current time, one minute
-                # apart in list order, so readers keep the list's ordering.
-                state[k] = format_datetime(now_dt - timedelta(minutes=i))
-            else:
-                state[k] = now
-            changed = True
+            state[k] = format_datetime(now_dt - timedelta(minutes=i)) if backlog else format_datetime(now_dt)
+            new_keys.append(k)
+    print(f"  new items: {len(new_keys)}")
 
-    if not changed and feed_path.exists():
-        print(f"[{name}] no new items")
-        return False
+    # scraped metadata (keep cached values if scraping fails or misses an item)
+    try:
+        cards = fetch_cards(list_url, set(by_key))
+    except Exception as e:
+        print(f"  scrape failed: {e}", file=sys.stderr)
+        cards = {}
+    for k, c in cards.items():
+        prev = meta.get(k, {})
+        meta[k] = {**prev, **c}
+    print(f"  TMDb lookups: {enrich_tmdb({k: meta[k] for k in by_key if k in meta})}"
+          + ("" if TMDB_TOKEN else " (TMDB_TOKEN not set)"))
 
-    by_key = {item_key(it): it for it in items}
-    ordered = sorted(
-        by_key.items(),
-        key=lambda kv: datetime.strptime(state[kv[0]], "%a, %d %b %Y %H:%M:%S %z"),
-        reverse=True,
-    )[:MAX_ITEMS]
-
-    entries = []
-    for k, it in ordered:
-        year = it.get("release_year") or it.get("year")
-        title = f"{it.get('title', 'Untitled')}" + (f" ({year})" if year else "")
-        mtype = it.get("mediatype") or it.get("type") or ""
-        link = item_link(it, list_url)
-        desc = " · ".join(str(x) for x in (mtype, year, it.get("imdb_id")) if x)
-        entries.append(
-            "    <item>\n"
-            f"      <title>{escape(title)}</title>\n"
-            f"      <link>{escape(link)}</link>\n"
-            f"      <guid isPermaLink=\"false\">{escape(k)}</guid>\n"
-            f"      <pubDate>{state[k]}</pubDate>\n"
-            f"      <description>{escape(desc)}</description>\n"
-            "    </item>"
-        )
-
-    xml = (
-        '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<rss version="2.0">\n  <channel>\n'
+    ordered = sorted(by_key, key=lambda k: datetime.strptime(state[k], DATE_FMT), reverse=True)[:MAX_ITEMS]
+    entries = [item_xml(k, by_key[k], meta.get(k, {}), state[k], list_url) for k in ordered]
+    channel_body = (
         f"    <title>MDBList: {escape(name)}</title>\n"
         f"    <link>{escape(list_url)}</link>\n"
         f"    <description>Auto-generated from {escape(list_url)}</description>\n"
-        f"    <lastBuildDate>{now}</lastBuildDate>\n"
-        + "\n".join(entries)
-        + "\n  </channel>\n</rss>\n"
-    )
+        + "\n".join(entries))
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">\n  <channel>\n'
+           f"    <lastBuildDate>{format_datetime(now_dt)}</lastBuildDate>\n"
+           + channel_body + "\n  </channel>\n</rss>\n")
 
+    old = feed_path.read_text() if feed_path.exists() else ""
+    strip = lambda s: re.sub(r"<lastBuildDate>.*?</lastBuildDate>", "", s)
     feed_path.parent.mkdir(exist_ok=True)
     state_path.parent.mkdir(exist_ok=True)
-    feed_path.write_text(xml)
     state_path.write_text(json.dumps(state, indent=1, sort_keys=True))
-    print(f"[{name}] wrote {len(entries)} items")
-    return True
+    meta_path.write_text(json.dumps({k: meta[k] for k in sorted(meta) if k in by_key},
+                                    indent=1, ensure_ascii=False))
+    if strip(old) != strip(xml):
+        feed_path.write_text(xml)
+        print(f"  wrote {len(entries)} items")
+    else:
+        print("  feed unchanged")
 
 
 def main() -> int:
@@ -121,7 +290,7 @@ def main() -> int:
     for name, url in feeds.items():
         try:
             build(name, url)
-        except Exception as e:  # keep going for other lists
+        except Exception as e:
             failures += 1
             print(f"[{name}] ERROR: {e}", file=sys.stderr)
     return 1 if failures == len(feeds) else 0
