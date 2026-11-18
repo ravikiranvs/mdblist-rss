@@ -9,7 +9,7 @@ surface as new items in any RSS reader.
 import json
 import sys
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -49,15 +49,23 @@ def build(name: str, list_url: str) -> bool:
         print(f"[{name}] list returned no items; leaving feed unchanged", file=sys.stderr)
         return False
 
-    now = format_datetime(datetime.now(timezone.utc))
-    first_run = not state
-    changed = False
-    for it in items:
+    now_dt = datetime.now(timezone.utc)
+    now = format_datetime(now_dt)
+    # Drop the old 1970 placeholder dates so they get re-stamped below.
+    legacy = [k for k, v in state.items() if v.startswith("Thu, 01 Jan 1970")]
+    for k in legacy:
+        del state[k]
+    backlog = not state  # first run (or migrating from placeholder dates)
+    changed = bool(legacy)
+    for i, it in enumerate(items):
         k = item_key(it)
         if k not in state:
-            # On the very first run, date everything at epoch so the
-            # initial backlog doesn't flood readers as "new".
-            state[k] = "Thu, 01 Jan 1970 00:00:00 +0000" if first_run else now
+            if backlog:
+                # Initial backlog: stamp with the current time, one minute
+                # apart in list order, so readers keep the list's ordering.
+                state[k] = format_datetime(now_dt - timedelta(minutes=i))
+            else:
+                state[k] = now
             changed = True
 
     if not changed and feed_path.exists():
