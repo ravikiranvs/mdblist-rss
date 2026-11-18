@@ -1,5 +1,7 @@
 name: Probe (temporary)
 on: workflow_dispatch
+permissions:
+  contents: write
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -14,7 +16,7 @@ jobs:
           echo "$ITEM" > item_path.txt
           curl -sSL -A "$UA" "https://mdblist.com$ITEM" -o item.html
           ls -la
-      - uses: actions/upload-artifact@v4
-        with:
-          name: probe
-          path: out
+      - run: |
+          cd out && git init -q -b probe && git add -A
+          git -c user.name=bot -c user.email=bot@x commit -qm probe
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" probe
