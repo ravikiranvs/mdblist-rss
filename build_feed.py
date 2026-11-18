@@ -4,9 +4,7 @@
 feeds.json maps a feed name to an MDBList list URL. For each list:
   - <list>/json gives the list membership (IMDb ids).
   - The list's HTML page (plus its infinite-scroll pages) gives poster,
-    synopsis, IMDb rating/votes, other ratings and the TMDb id.
-  - If the TMDB_TOKEN env var is set (TMDb API Read Access Token), the
-    digital release date is looked up via TMDb's release_dates endpoint.
+    synopsis, IMDb rating/votes, other ratings and links.
 State:
   state/<name>.json       first-seen time per item (used as pubDate)
   state/<name>.meta.json  cached metadata per item
@@ -14,7 +12,6 @@ Output: feeds/<name>.xml (RSS 2.0 + Media RSS for posters).
 """
 import html
 import json
-import os
 import re
 import sys
 import urllib.parse
@@ -29,8 +26,6 @@ MAX_ITEMS = 200
 MAX_PAGES = 15
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/131.0 Safari/537.36")
-TMDB_TOKEN = os.environ.get("TMDB_TOKEN", "").strip()
-TMDB_RECHECK = timedelta(hours=24)   # re-ask TMDb for items with no digital date yet
 DATE_FMT = "%a, %d %b %Y %H:%M:%S %z"
 
 
@@ -78,8 +73,6 @@ def parse_cards(page: str) -> dict[str, dict]:
                 "url": g.group(1), "rating": g.group(3) or None, "votes": g.group(4) or None}
         d["ratings"] = ratings
         imdb = re.search(r"tt\d+", ratings.get("IMDb", {}).get("url", ""))
-        tmdb = re.search(r"themoviedb\.org/(movie|tv)/(\d+)", ratings.get("TMDb", {}).get("url", ""))
-        d["tmdb"] = tmdb and f"{tmdb.group(1)}/{tmdb.group(2)}"
         if imdb:
             out[imdb.group()] = d
     return out
@@ -108,49 +101,6 @@ def fetch_cards(list_url: str, wanted: set[str]) -> dict[str, dict]:
     return cards
 
 
-# ---------------------------------------------------------------- TMDb
-
-def tmdb_digital(tmdb: str) -> dict | None:
-    """Earliest digital (type 4) release; prefers US, then IN, then earliest anywhere."""
-    kind, tid = tmdb.split("/")
-    if kind != "movie":
-        return None
-    data = json.loads(get(f"https://api.themoviedb.org/3/movie/{tid}/release_dates",
-                          {"Authorization": f"Bearer {TMDB_TOKEN}", "Accept": "application/json"}))
-    found = {}
-    for r in data.get("results", []):
-        dates = [x["release_date"][:10] for x in r.get("release_dates", []) if x.get("type") == 4]
-        if dates:
-            found[r["iso_3166_1"]] = min(dates)
-    if not found:
-        return None
-    for c in ("US", "IN"):
-        if c in found:
-            return {"date": found[c], "country": c}
-    c = min(found, key=found.get)
-    return {"date": found[c], "country": c}
-
-
-def enrich_tmdb(meta: dict) -> int:
-    if not TMDB_TOKEN:
-        return 0
-    now = datetime.now(timezone.utc)
-    n = 0
-    for k, m in meta.items():
-        if not m.get("tmdb") or m.get("digital"):
-            continue
-        checked = m.get("digital_checked")
-        if checked and now - datetime.fromisoformat(checked) < TMDB_RECHECK:
-            continue
-        try:
-            m["digital"] = tmdb_digital(m["tmdb"])
-            m["digital_checked"] = now.isoformat(timespec="seconds")
-            n += 1
-        except Exception as e:
-            print(f"  TMDb {k}: {e}", file=sys.stderr)
-    return n
-
-
 # ---------------------------------------------------------------- feed
 
 def fmt_votes(v: str | None) -> str:
@@ -166,7 +116,6 @@ def item_xml(k: str, it: dict, m: dict, pub: str, list_url: str) -> str:
     base_title = m.get("title") or (f"{it.get('title', 'Untitled')}" + (f" ({year})" if year else ""))
     imdb = m.get("ratings", {}).get("IMDb", {})
     imdb_rating = imdb.get("rating")
-    dig = m.get("digital")
 
     title = base_title + (f" — IMDb {imdb_rating}" if imdb_rating else "")
     link = f"https://www.imdb.com/title/{k}/"
@@ -176,10 +125,6 @@ def item_xml(k: str, it: dict, m: dict, pub: str, list_url: str) -> str:
         facts.append(f"<b>IMDb:</b> {escape(imdb_rating)}{escape(fmt_votes(imdb.get('votes')))}")
     elif "ratings" in m:  # scraped, but IMDb has no rating yet
         facts.append("<b>IMDb:</b> not rated yet")
-    if dig:
-        facts.append(f"<b>Digital release:</b> {escape(dig['date'])} ({escape(dig['country'])})")
-    elif m.get("digital_checked"):
-        facts.append("<b>Digital release:</b> not announced")
     others = []
     for src, label in (("Letterboxd", "Letterboxd"), ("Tomatoes", "RT"),
                        ("Metacritic", "MC"), ("Trakt", "Trakt")):
@@ -252,11 +197,7 @@ def build(name: str, list_url: str) -> None:
     except Exception as e:
         print(f"  scrape failed: {e}", file=sys.stderr)
         cards = {}
-    for k, c in cards.items():
-        prev = meta.get(k, {})
-        meta[k] = {**prev, **c}
-    print(f"  TMDb lookups: {enrich_tmdb({k: meta[k] for k in by_key if k in meta})}"
-          + ("" if TMDB_TOKEN else " (TMDB_TOKEN not set)"))
+    meta.update(cards)
 
     ordered = sorted(by_key, key=lambda k: datetime.strptime(state[k], DATE_FMT), reverse=True)[:MAX_ITEMS]
     entries = [item_xml(k, by_key[k], meta.get(k, {}), state[k], list_url) for k in ordered]
