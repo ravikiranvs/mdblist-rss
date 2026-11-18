@@ -1,6 +1,6 @@
 # mdblist-rss
 
-Turns MDBList lists into RSS feeds, refreshed every 6 hours by GitHub Actions.
+Turns MDBList lists into RSS feeds, refreshed daily at 2:00 PM IST by GitHub Actions.
 
 - Add lists in `feeds.json` as `"name": "https://mdblist.com/lists/<user>/<slug>"`.
 - Feed URL: `https://raw.githubusercontent.com/<owner>/<repo>/main/feeds/<name>.xml`
