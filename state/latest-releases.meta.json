@@ -9,7 +9,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt10377864",
     "rating": "5.6",
-    "votes": "3599"
+    "votes": "3647"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1007752",
@@ -58,7 +58,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt10794054",
     "rating": "6.7",
-    "votes": "9795"
+    "votes": "9867"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1172770",
@@ -102,7 +102,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt13609648",
     "rating": "7.2",
-    "votes": "12824"
+    "votes": "12927"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1233436",
@@ -146,7 +146,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt13611778",
     "rating": "5.0",
-    "votes": "5398"
+    "votes": "5519"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1054539",
@@ -194,8 +194,8 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt13884466",
-    "rating": "3.7",
-    "votes": "597"
+    "rating": "3.6",
+    "votes": "604"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1405425",
@@ -224,7 +224,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt14129116",
     "rating": "6.5",
-    "votes": "1363"
+    "votes": "1545"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/871806",
@@ -233,8 +233,8 @@
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1084409",
-    "rating": "72",
-    "votes": "16"
+    "rating": "67",
+    "votes": "23"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/a-talent-for-murder-2026/",
@@ -268,7 +268,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt14374794",
     "rating": "2.8",
-    "votes": "41"
+    "votes": "42"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1403450",
@@ -292,6 +292,30 @@
    }
   }
  },
+ "tt14413964": {
+  "mediatype": "movie",
+  "poster": "https://image.tmdb.org/t/p/w500/c7eHnRXLK86sdCuq0rnZgp7GvS5.jpg",
+  "mdb_score": null,
+  "title": "Steps (2026)",
+  "synopsis": "Think you know Cinderella's 'evil' stepsisters? Think again! When misunderstood Lilith is blamed for hijacking the Royal Ball with a stolen magic wand, she accidentally turns her sister Margot into a frog and leaves the kingdom in the hands of a prince-obsessed mean girl. Now Lilith must team up with Cinderella — and a surprisingly dreamy troll — to save the kingdom, repair the fractured fairytale, and prove that even so-called villains deserve a shot at happily-ever-after.",
+  "ratings": {
+   "IMDb": {
+    "url": "https://www.imdb.com/title/tt14413964",
+    "rating": null,
+    "votes": null
+   },
+   "TMDb": {
+    "url": "https://www.themoviedb.org/movie/1595124",
+    "rating": null,
+    "votes": null
+   },
+   "Letterboxd": {
+    "url": "https://letterboxd.com/film/steps-2026/",
+    "rating": null,
+    "votes": null
+   }
+  }
+ },
  "tt15095848": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/ouGH1PS0xjDyfTQOhppn7QzJqQZ.jpg",
@@ -302,22 +326,22 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt15095848",
     "rating": "6.9",
-    "votes": "1319"
+    "votes": "1424"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/845830",
     "rating": "77",
-    "votes": "81"
+    "votes": "99"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1050981",
     "rating": "70",
-    "votes": "28"
+    "votes": "33"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/being-heumann/",
     "rating": "3.6",
-    "votes": "7115"
+    "votes": "8149"
    },
    "Popcorn": {
     "url": "https://www.rottentomatoes.com/m/being_heumann",
@@ -370,6 +394,40 @@
    }
   }
  },
+ "tt18351090": {
+  "mediatype": "movie",
+  "poster": "https://image.tmdb.org/t/p/w500/6bQ0YqBV61wlBHArIyksxs0FoT6.jpg",
+  "mdb_score": null,
+  "title": "Perfect Liars (2026)",
+  "synopsis": "N/A",
+  "ratings": {
+   "IMDb": {
+    "url": "https://www.imdb.com/title/tt18351090",
+    "rating": null,
+    "votes": null
+   },
+   "Trakt": {
+    "url": "https://trakt.tv/movies/1376301",
+    "rating": "40",
+    "votes": "1"
+   },
+   "TMDb": {
+    "url": "https://www.themoviedb.org/movie/1568060",
+    "rating": "80",
+    "votes": "1"
+   },
+   "Letterboxd": {
+    "url": "https://letterboxd.com/film/perfect-liars/",
+    "rating": null,
+    "votes": null
+   },
+   "Tomatoes": {
+    "url": "https://www.rottentomatoes.com/m/perfect_liars",
+    "rating": null,
+    "votes": null
+   }
+  }
+ },
  "tt18468926": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/ooH1RBIh9tSp8XmEuIstc0h6cyF.jpg",
@@ -414,7 +472,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt21285562",
     "rating": "6.2",
-    "votes": "35184"
+    "votes": "35414"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1131132",
@@ -463,22 +521,22 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt22084616",
     "rating": "7.9",
-    "votes": "389937"
+    "votes": "390560"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/905132",
     "rating": "85",
-    "votes": "42031"
+    "votes": "42779"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/969681",
     "rating": "85",
-    "votes": "6872"
+    "votes": "6983"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/spider-man-brand-new-day/",
     "rating": "4.0",
-    "votes": "4777585"
+    "votes": "4812904"
    },
    "Metacritic": {
     "url": "https://www.metacritic.com/movie/spider-man-brand-new-day",
@@ -495,34 +553,44 @@
  "tt24818230": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/bRa83oPFFPqaAF3wrpVWPqqfFel.jpg",
-  "mdb_score": null,
+  "mdb_score": "4.7",
   "title": "Madden (2026)",
-  "synopsis": "Chronicles John Madden's incredible journey alongside best friend and true original Al Davis—from a Super Bowl-winning partnership with the Raiders, to becoming football’s most recognizable voice, to building the worldwide Madden NFL video game.",
+  "synopsis": "Chronicles John Madden's incredible journey alongside best friend and true original Al Davis—from a Super Bowl-winning partnership with the Raiders, to becoming football's most recognizable voice, to building the worldwide Madden NFL video game.",
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt24818230",
-    "rating": null,
-    "votes": null
+    "rating": "5.7",
+    "votes": "1654"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/911125",
-    "rating": "25",
-    "votes": "2"
+    "rating": "65",
+    "votes": "145"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1131943",
-    "rating": null,
-    "votes": null
+    "rating": "80",
+    "votes": "25"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/madden-2026/",
-    "rating": null,
-    "votes": null
+    "rating": "2.5",
+    "votes": "6973"
+   },
+   "Tomatoes": {
+    "url": "https://www.rottentomatoes.com/m/madden",
+    "rating": "15",
+    "votes": "33"
+   },
+   "Popcorn": {
+    "url": "https://www.rottentomatoes.com/m/madden",
+    "rating": "55",
+    "votes": "100"
    },
    "Metacritic": {
     "url": "https://www.metacritic.com/movie/madden",
-    "rating": "33",
-    "votes": "13"
+    "rating": "29",
+    "votes": "19"
    },
    "RogerEbert": {
     "url": "https://www.rogerebert.com/reviews/john-madden-nicolas-cage-christian-bale-amazon-david-o-russell-prime-video-movie-review-2026",
@@ -541,7 +609,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt27041231",
     "rating": "7.1",
-    "votes": "2738"
+    "votes": "2801"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/881440",
@@ -584,8 +652,8 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt27369017",
-    "rating": "6.6",
-    "votes": "35557"
+    "rating": "6.5",
+    "votes": "35756"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/851678",
@@ -629,7 +697,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt27419420",
     "rating": "6.1",
-    "votes": "24009"
+    "votes": "24147"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/929414",
@@ -638,8 +706,8 @@
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1153576",
-    "rating": "63",
-    "votes": "247"
+    "rating": "62",
+    "votes": "253"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/street-fighter-2026/",
@@ -678,22 +746,22 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt27739255",
     "rating": "6.1",
-    "votes": "642"
+    "votes": "649"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/906252",
     "rating": "62",
-    "votes": "37"
+    "votes": "44"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1126097",
-    "rating": "62",
-    "votes": "10"
+    "rating": "60",
+    "votes": "12"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/charlie-harper/",
     "rating": "3.3",
-    "votes": "5099"
+    "votes": "5379"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/charlie_harper",
@@ -727,22 +795,22 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt28498219",
     "rating": "5.6",
-    "votes": "14965"
+    "votes": "15022"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/925050",
     "rating": "69",
-    "votes": "3650"
+    "votes": "3760"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1148365",
     "rating": "75",
-    "votes": "640"
+    "votes": "652"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/matchbox-the-movie/",
     "rating": "2.3",
-    "votes": "18470"
+    "votes": "19125"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/matchbox_the_movie",
@@ -776,7 +844,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt28553375",
     "rating": "7.6",
-    "votes": "5294"
+    "votes": "5320"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/939051",
@@ -819,8 +887,8 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt28772290",
-    "rating": "4.4",
-    "votes": "556"
+    "rating": "4.5",
+    "votes": "560"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1176814",
@@ -829,8 +897,8 @@
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1438207",
-    "rating": "50",
-    "votes": "2"
+    "rating": "40",
+    "votes": "4"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/ever-after-2025-2/",
@@ -854,12 +922,12 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt28784376",
     "rating": "6.0",
-    "votes": "566"
+    "votes": "569"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1326447",
     "rating": "62",
-    "votes": "54"
+    "votes": "56"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1596301",
@@ -869,46 +937,46 @@
    "Letterboxd": {
     "url": "https://letterboxd.com/film/mum-im-alien-pregnant/",
     "rating": "3.4",
-    "votes": "3349"
+    "votes": "3452"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/mum_im_alien_pregnant",
     "rating": "96",
-    "votes": "23"
+    "votes": "24"
    }
   }
  },
  "tt29256561": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/ocg5JfJP19fodcv5uQUApkmZMdI.jpg",
-  "mdb_score": "4.8",
+  "mdb_score": "4.7",
   "title": "The Beast (2026)",
   "synopsis": "When a militia of unidentified hostiles coordinates a coup against the United States, the president must fight back by utilizing the highly classified offensive capabilities of his armored limousine, nicknamed The Beast.",
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt29256561",
-    "rating": "4.6",
-    "votes": "1204"
+    "rating": "4.5",
+    "votes": "1351"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/955844",
     "rating": "65",
-    "votes": "334"
+    "votes": "432"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1185344",
-    "rating": "55",
-    "votes": "41"
+    "rating": "51",
+    "votes": "47"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/the-beast-2026/",
-    "rating": "2.4",
-    "votes": "1558"
+    "rating": "2.3",
+    "votes": "1777"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/the_beast_2026",
-    "rating": "50",
-    "votes": "22"
+    "rating": "48",
+    "votes": "23"
    },
    "Popcorn": {
     "url": "https://www.rottentomatoes.com/m/the_beast_2026",
@@ -937,7 +1005,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt29630464",
     "rating": "4.4",
-    "votes": "1684"
+    "votes": "1692"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1123297",
@@ -976,7 +1044,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt29714073",
     "rating": "6.7",
-    "votes": "8597"
+    "votes": "8684"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/967502",
@@ -1049,7 +1117,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt30505578",
     "rating": "3.6",
-    "votes": "628"
+    "votes": "633"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/907993",
@@ -1083,7 +1151,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt30850718",
     "rating": "4.9",
-    "votes": "985"
+    "votes": "992"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1148365",
@@ -1093,7 +1161,7 @@
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1403676",
     "rating": "58",
-    "votes": "5"
+    "votes": "6"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/april-x/",
@@ -1122,7 +1190,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt31049299",
     "rating": "5.7",
-    "votes": "36721"
+    "votes": "36840"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/999910",
@@ -1171,12 +1239,12 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt31183803",
     "rating": "5.6",
-    "votes": "307"
+    "votes": "311"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1004499",
-    "rating": "59",
-    "votes": "16"
+    "rating": "60",
+    "votes": "19"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1241046",
@@ -1186,7 +1254,7 @@
    "Letterboxd": {
     "url": "https://letterboxd.com/film/a-prayer-for-the-dying-2026/",
     "rating": "3.1",
-    "votes": "1368"
+    "votes": "1376"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/a_prayer_for_the_dying_2026",
@@ -1210,22 +1278,22 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt32261958",
     "rating": "6.0",
-    "votes": "39304"
+    "votes": "39552"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1043653",
     "rating": "69",
-    "votes": "5159"
+    "votes": "5420"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1283515",
-    "rating": "69",
-    "votes": "728"
+    "rating": "70",
+    "votes": "750"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/verity-2026/",
     "rating": "2.6",
-    "votes": "520518"
+    "votes": "534239"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/verity",
@@ -1259,7 +1327,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt32268691",
     "rating": "5.4",
-    "votes": "9182"
+    "votes": "9213"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1043857",
@@ -1308,7 +1376,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt32268992",
     "rating": "5.0",
-    "votes": "7525"
+    "votes": "7571"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1043813",
@@ -1357,7 +1425,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt32298494",
     "rating": "6.6",
-    "votes": "1718"
+    "votes": "1731"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1046176",
@@ -1401,7 +1469,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt32329539",
     "rating": "5.3",
-    "votes": "2629"
+    "votes": "2653"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1124416",
@@ -1443,29 +1511,29 @@
  "tt32358390": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/n5gSNf55KWfDc9hqP4H1KCCSutE.jpg",
-  "mdb_score": "7.0",
+  "mdb_score": "6.9",
   "title": "The Cycle (2026)",
   "synopsis": "A daughter unravels her father's dark past after his body, missing for 36 years, is found at a horrific crime scene.",
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt32358390",
     "rating": "6.3",
-    "votes": "9847"
+    "votes": "9948"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1050054",
     "rating": "67",
-    "votes": "1132"
+    "votes": "1239"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1290418",
-    "rating": "68",
-    "votes": "160"
+    "rating": "67",
+    "votes": "165"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/the-cycle-2026-2/",
-    "rating": "3.3",
-    "votes": "37084"
+    "rating": "3.2",
+    "votes": "40292"
    },
    "Popcorn": {
     "url": "https://www.rottentomatoes.com/m/the_cycle_2026",
@@ -1494,7 +1562,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt32393988",
     "rating": "6.0",
-    "votes": "31949"
+    "votes": "32030"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1051116",
@@ -1504,7 +1572,7 @@
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1291595",
     "rating": "76",
-    "votes": "1076"
+    "votes": "1081"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/insidious-out-of-the-further/",
@@ -1543,22 +1611,22 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt32588798",
     "rating": "6.0",
-    "votes": "20162"
+    "votes": "20221"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1062564",
     "rating": "71",
-    "votes": "3056"
+    "votes": "3127"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1302904",
     "rating": "71",
-    "votes": "395"
+    "votes": "401"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/practical-magic-2/",
     "rating": "2.8",
-    "votes": "184400"
+    "votes": "186217"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/practical_magic_2",
@@ -1586,8 +1654,8 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt32752251",
-    "rating": "5.2",
-    "votes": "220"
+    "rating": "5.3",
+    "votes": "229"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1069534",
@@ -1626,7 +1694,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt32827454",
     "rating": "5.1",
-    "votes": "645"
+    "votes": "648"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1241469",
@@ -1714,7 +1782,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt33095251",
     "rating": "7.2",
-    "votes": "24629"
+    "votes": "24769"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1087296",
@@ -1746,19 +1814,19 @@
  "tt33184695": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/kx4ippA15v1Qc1xZjsjrb2r8NQZ.jpg",
-  "mdb_score": "3.7",
+  "mdb_score": "3.8",
   "title": "Rolling Loud: The Movie (2026)",
   "synopsis": "Desperate to reconnect with his distant son, a father secretly takes him to the chaos of Rolling Loud, only to plunge into a wild, frantic search across the massive hip-hop festival when the 13-year-old vanishes into the crowd.",
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt33184695",
     "rating": "5.5",
-    "votes": "385"
+    "votes": "428"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1092756",
-    "rating": "69",
-    "votes": "56"
+    "rating": "68",
+    "votes": "64"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1336166",
@@ -1768,7 +1836,17 @@
    "Letterboxd": {
     "url": "https://letterboxd.com/film/rolling-loud-the-movie/",
     "rating": "2.8",
-    "votes": "3799"
+    "votes": "3901"
+   },
+   "Tomatoes": {
+    "url": "https://www.rottentomatoes.com/m/rolling_loud_the_movie",
+    "rating": null,
+    "votes": null
+   },
+   "Popcorn": {
+    "url": "https://www.rottentomatoes.com/m/rolling_loud_the_movie",
+    "rating": "75",
+    "votes": "50"
    }
   }
  },
@@ -1782,7 +1860,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt33214716",
     "rating": "4.8",
-    "votes": "1238"
+    "votes": "1244"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1210305",
@@ -1801,9 +1879,38 @@
    }
   }
  },
+ "tt33402927": {
+  "mediatype": "movie",
+  "poster": "https://image.tmdb.org/t/p/w500/EE0nu2jPKGio3ICEG193Z7DDSe.jpg",
+  "mdb_score": "2.5",
+  "title": "On Behalf of My Son (2026)",
+  "synopsis": "Vicentina struggles to cope with the death of her son Wesley after a tragic bus accident, in which he was the driver. As the investigation unfolds, evidence suggests that Wesley’s actions may have been suicidal. Vicentina then embarks on a journey to seek out the victims’ families and apologize, while confronting her own grief and uncertainty.",
+  "ratings": {
+   "IMDb": {
+    "url": "https://www.imdb.com/title/tt33402927",
+    "rating": "6.7",
+    "votes": "77"
+   },
+   "Trakt": {
+    "url": "https://trakt.tv/movies/1372354",
+    "rating": "87",
+    "votes": "4"
+   },
+   "TMDb": {
+    "url": "https://www.themoviedb.org/movie/1307474",
+    "rating": null,
+    "votes": null
+   },
+   "Letterboxd": {
+    "url": "https://letterboxd.com/film/on-behalf-of-my-son/",
+    "rating": "3.6",
+    "votes": "1296"
+   }
+  }
+ },
  "tt33764258": {
   "mediatype": "movie",
-  "poster": "https://image.tmdb.org/t/p/w500/zG7hzAyqa9KIjM0Yse0bxty4Cq8.jpg",
+  "poster": "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
   "mdb_score": "8.9",
   "title": "The Odyssey (2026)",
   "synopsis": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
@@ -1811,22 +1918,22 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt33764258",
     "rating": "8.4",
-    "votes": "577627"
+    "votes": "579974"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1117351",
     "rating": "86",
-    "votes": "35223"
+    "votes": "35694"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1368337",
     "rating": "80",
-    "votes": "5058"
+    "votes": "5177"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/the-odyssey-2026/",
     "rating": "4.3",
-    "votes": "4816587"
+    "votes": "4830808"
    },
    "RogerEbert": {
     "url": "https://www.rogerebert.com/reviews/the-odyssey-christopher-nolan-matt-damon-film-review-2026",
@@ -1845,7 +1952,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt33998222",
     "rating": "4.9",
-    "votes": "617"
+    "votes": "621"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1120241",
@@ -1883,8 +1990,8 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt34206385",
-    "rating": "6.9",
-    "votes": "47264"
+    "rating": "6.8",
+    "votes": "47918"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1123558",
@@ -1928,7 +2035,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt34379051",
     "rating": "6.5",
-    "votes": "9549"
+    "votes": "9615"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1127982",
@@ -1977,7 +2084,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt34384900",
     "rating": "6.5",
-    "votes": "12501"
+    "votes": "12577"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1128339",
@@ -2020,8 +2127,8 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt34385184",
-    "rating": "5.7",
-    "votes": "1027"
+    "rating": "5.8",
+    "votes": "1078"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1128337",
@@ -2070,7 +2177,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt34470118",
     "rating": "4.6",
-    "votes": "873"
+    "votes": "878"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1130734",
@@ -2104,7 +2211,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt34611096",
     "rating": "5.9",
-    "votes": "664"
+    "votes": "669"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1289157",
@@ -2148,7 +2255,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt34798706",
     "rating": "6.4",
-    "votes": "387"
+    "votes": "393"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1254337",
@@ -2187,7 +2294,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt35180305",
     "rating": "4.3",
-    "votes": "236"
+    "votes": "239"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1403054",
@@ -2221,7 +2328,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt35511966",
     "rating": "8.2",
-    "votes": "14969"
+    "votes": "15168"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1163229",
@@ -2260,7 +2367,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt35538033",
     "rating": "7.4",
-    "votes": "171412"
+    "votes": "172459"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1164118",
@@ -2270,7 +2377,7 @@
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1423191",
     "rating": "75",
-    "votes": "2335"
+    "votes": "2388"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/resident-evil-2026/",
@@ -2299,7 +2406,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt35669487",
     "rating": "7.0",
-    "votes": "322"
+    "votes": "344"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1218816",
@@ -2333,7 +2440,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt35856037",
     "rating": "6.6",
-    "votes": "8618"
+    "votes": "8780"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1176071",
@@ -2367,7 +2474,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt36271247",
     "rating": "6.4",
-    "votes": "839"
+    "votes": "843"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1189044",
@@ -2396,6 +2503,30 @@
    }
   }
  },
+ "tt36303063": {
+  "mediatype": "movie",
+  "poster": "https://image.tmdb.org/t/p/w500/8GFwwkwj4X7a5ejPlsRGuWSZ6PU.jpg",
+  "mdb_score": null,
+  "title": "Unbearable Christmas (2026)",
+  "synopsis": "Out-of-work weatherman Troy Tipton has one Christmas mission: retrieve the beloved teddy bear he pawned for holiday cash. With wife Becca, mother-in-law Dawn, and the kids in tow, Troy hits the road from Ohio to Florida in his old news van. But the family road trip gets even wilder when they discover the cherished bear is actually a priceless Teddy Roosevelt antique worth millions.",
+  "ratings": {
+   "IMDb": {
+    "url": "https://www.imdb.com/title/tt36303063",
+    "rating": null,
+    "votes": null
+   },
+   "TMDb": {
+    "url": "https://www.themoviedb.org/movie/1458249",
+    "rating": null,
+    "votes": null
+   },
+   "Letterboxd": {
+    "url": "https://letterboxd.com/film/unbearable-christmas/",
+    "rating": null,
+    "votes": null
+   }
+  }
+ },
  "tt36429458": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/5nZVjsCk5tWyyhLGt5U2TxsR85w.jpg",
@@ -2406,7 +2537,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt36429458",
     "rating": "6.6",
-    "votes": "2681"
+    "votes": "2689"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1194719",
@@ -2445,22 +2576,22 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt36583977",
     "rating": "7.4",
-    "votes": "12187"
+    "votes": "12247"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1200342",
     "rating": "80",
-    "votes": "1354"
+    "votes": "1469"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1465063",
     "rating": "80",
-    "votes": "262"
+    "votes": "277"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/forgotten-island-2026/",
     "rating": "3.9",
-    "votes": "157338"
+    "votes": "161449"
    },
    "Metacritic": {
     "url": "https://www.metacritic.com/movie/forgotten-island",
@@ -2484,7 +2615,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt36586020",
     "rating": "5.3",
-    "votes": "24880"
+    "votes": "25373"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1145938",
@@ -2533,7 +2664,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt36789083",
     "rating": "5.9",
-    "votes": "362"
+    "votes": "367"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1216713",
@@ -2564,30 +2695,30 @@
  },
  "tt36834996": {
   "mediatype": "movie",
-  "poster": "https://image.tmdb.org/t/p/w500/kFD1vl6FPt8heIIgFiAyIbZqrYh.jpg",
-  "mdb_score": "8.4",
+  "poster": "https://image.tmdb.org/t/p/w500/qPJ4yjGitxUGRJiyxUlM51OEbp5.jpg",
+  "mdb_score": "8.3",
   "title": "All of a Sudden (2026)",
   "synopsis": "Director of a care facility for the elderly, Marie-Lou strives to introduce an innovative care philosophy based on listening and respecting residents’ dignity, despite resistance from part of her staff. Her encounter with Mari, a Japanese theater director battling cancer, will profoundly reshape her path. By forming a deep, supportive friendship, the two women join forces in a shared struggle to make the impossible possible.",
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt36834996",
     "rating": "7.9",
-    "votes": "2093"
+    "votes": "2122"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1210191",
     "rating": "80",
-    "votes": "79"
+    "votes": "84"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1476614",
     "rating": "78",
-    "votes": "82"
+    "votes": "83"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/all-of-a-sudden-2026/",
     "rating": "4.2",
-    "votes": "33287"
+    "votes": "35351"
    }
   }
  },
@@ -2601,7 +2732,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt36841161",
     "rating": "7.1",
-    "votes": "4049"
+    "votes": "4073"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1210620",
@@ -2645,7 +2776,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt36980182",
     "rating": "7.0",
-    "votes": "3241"
+    "votes": "3262"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1276782",
@@ -2689,7 +2820,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt36981462",
     "rating": "6.4",
-    "votes": "1162"
+    "votes": "1163"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1215685",
@@ -2732,8 +2863,8 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37020296",
-    "rating": "6.8",
-    "votes": "841"
+    "rating": "6.7",
+    "votes": "1016"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1207110",
@@ -2777,7 +2908,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37027309",
     "rating": "6.2",
-    "votes": "3532"
+    "votes": "3542"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1406563",
@@ -2845,7 +2976,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37070354",
     "rating": "5.0",
-    "votes": "2647"
+    "votes": "2656"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1347076",
@@ -2855,12 +2986,12 @@
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1623256",
     "rating": "60",
-    "votes": "66"
+    "votes": "67"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/the-storm-2026/",
     "rating": "2.6",
-    "votes": "3481"
+    "votes": "3511"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/stormen",
@@ -2877,29 +3008,29 @@
  "tt37180686": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/s9syckECnUYhKePQ1A0DC0mFVZ9.jpg",
-  "mdb_score": "6.3",
+  "mdb_score": "6.2",
   "title": "Drive - The Pretenders (2026)",
   "synopsis": "A young mechanic fakes an engagement with racing's most scandalous star — officially for his reputation, secretly for her own shot behind the wheel. But soon the lie threatens to destroy everything — including what's already become so much more than just a deal.",
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37180686",
     "rating": "5.6",
-    "votes": "3121"
+    "votes": "3147"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1326425",
     "rating": "70",
-    "votes": "1091"
+    "votes": "1125"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1596275",
-    "rating": "76",
-    "votes": "184"
+    "rating": "75",
+    "votes": "187"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/drive-the-pretenders/",
     "rating": "2.5",
-    "votes": "45607"
+    "votes": "47009"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/drive_the_pretenders",
@@ -2918,7 +3049,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37281055",
     "rating": "6.6",
-    "votes": "25960"
+    "votes": "26067"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1242094",
@@ -2955,29 +3086,29 @@
  "tt37458193": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/wGfTFVeguXDXYrwPQ8QMFsaSK2M.jpg",
-  "mdb_score": "6.8",
+  "mdb_score": "6.6",
   "title": "My Best Friend (2026)",
   "synopsis": "When empty nest syndrome hits, two BFFs follow their teen daughters to Portugal and find love, fun and a whole new meaning of friendship along the way.",
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37458193",
     "rating": "6.0",
-    "votes": "1667"
+    "votes": "1677"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1019397",
     "rating": "78",
-    "votes": "596"
+    "votes": "651"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1257147",
-    "rating": "70",
-    "votes": "54"
+    "rating": "69",
+    "votes": "55"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/my-best-friend-2026/",
-    "rating": "3.1",
-    "votes": "69913"
+    "rating": "3.0",
+    "votes": "73732"
    }
   }
  },
@@ -2991,7 +3122,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37522541",
     "rating": "5.1",
-    "votes": "5425"
+    "votes": "5485"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1236751",
@@ -3020,27 +3151,32 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37675123",
     "rating": "5.3",
-    "votes": "1414"
+    "votes": "1509"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1245706",
-    "rating": "64",
-    "votes": "241"
+    "rating": "65",
+    "votes": "297"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1518204",
     "rating": "65",
-    "votes": "51"
+    "votes": "56"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/allen-2026/",
     "rating": "2.7",
-    "votes": "3193"
+    "votes": "3998"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/allen",
     "rating": null,
     "votes": null
+   },
+   "Popcorn": {
+    "url": "https://www.rottentomatoes.com/m/allen",
+    "rating": "55",
+    "votes": "50"
    }
   }
  },
@@ -3054,7 +3190,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37775809",
     "rating": "6.1",
-    "votes": "691"
+    "votes": "694"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1311107",
@@ -3103,7 +3239,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37803364",
     "rating": "7.6",
-    "votes": "4927"
+    "votes": "5048"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1216186",
@@ -3141,8 +3277,8 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37818327",
-    "rating": "5.9",
-    "votes": "811"
+    "rating": "5.8",
+    "votes": "815"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1221949",
@@ -3186,7 +3322,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37853455",
     "rating": "6.0",
-    "votes": "19276"
+    "votes": "19300"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1172561",
@@ -3228,19 +3364,19 @@
  "tt37961714": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/chZa8Jd9kSDj11bekGjwwotFPEw.jpg",
-  "mdb_score": "5.9",
+  "mdb_score": "6.0",
   "title": "Surviving Hurricane Otis (2026)",
   "synopsis": "Two estranged brothers struggle to survive Hurricane Otis in Acapulco, where their bond and courage turn adversity into hope.",
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt37961714",
     "rating": "5.1",
-    "votes": "1953"
+    "votes": "1965"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1402839",
     "rating": "64",
-    "votes": "469"
+    "votes": "471"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1780005",
@@ -3250,7 +3386,7 @@
    "Letterboxd": {
     "url": "https://letterboxd.com/film/surviving-hurricane-otis/",
     "rating": "2.7",
-    "votes": "9188"
+    "votes": "9296"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/surviving_hurricane_otis",
@@ -3261,7 +3397,7 @@
  },
  "tt38213251": {
   "mediatype": "movie",
-  "poster": "https://image.tmdb.org/t/p/w500/zhxlzxBlO1sWB1rPn7RmAoeQ2na.jpg",
+  "poster": "https://image.tmdb.org/t/p/w500/azArOQaVxKa3367XJv2l4ewjsdB.jpg",
   "mdb_score": "5.6",
   "title": "Heartland (2026)",
   "synopsis": "Former country music legend Misty Jones returns to Nashville to unravel the truth behind her rising-star niece's disappearance.",
@@ -3269,7 +3405,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt38213251",
     "rating": "5.5",
-    "votes": "3678"
+    "votes": "4172"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1266772",
@@ -3278,8 +3414,8 @@
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1543469",
-    "rating": "63",
-    "votes": "80"
+    "rating": "62",
+    "votes": "96"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/heartland-2026/",
@@ -3317,13 +3453,13 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt38258118",
-    "rating": "5.5",
-    "votes": "98"
+    "rating": "4.7",
+    "votes": "118"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1341422",
-    "rating": "69",
-    "votes": "31"
+    "rating": "67",
+    "votes": "34"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1615596",
@@ -3352,7 +3488,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt38420997",
     "rating": "5.4",
-    "votes": "592"
+    "votes": "627"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1281155",
@@ -3386,7 +3522,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt38453653",
     "rating": "3.5",
-    "votes": "261"
+    "votes": "224"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1381151",
@@ -3425,7 +3561,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt38504402",
     "rating": "6.3",
-    "votes": "465"
+    "votes": "474"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1265074",
@@ -3435,7 +3571,7 @@
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1541477",
     "rating": "60",
-    "votes": "57"
+    "votes": "59"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/you-me-us-2026/",
@@ -3459,22 +3595,22 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt38515310",
     "rating": "6.5",
-    "votes": "3302"
+    "votes": "3392"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1295937",
     "rating": "79",
-    "votes": "531"
+    "votes": "576"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1570488",
     "rating": "72",
-    "votes": "67"
+    "votes": "73"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/a-dogs-perfect-christmas/",
     "rating": "2.9",
-    "votes": "17852"
+    "votes": "18931"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/a_dogs_perfect_christmas",
@@ -3483,7 +3619,7 @@
    },
    "Popcorn": {
     "url": "https://www.rottentomatoes.com/m/a_dogs_perfect_christmas",
-    "rating": "93",
+    "rating": "92",
     "votes": "250"
    }
   }
@@ -3498,7 +3634,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt38589433",
     "rating": "6.5",
-    "votes": "3363"
+    "votes": "3422"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1351800",
@@ -3542,7 +3678,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt38672588",
     "rating": "5.4",
-    "votes": "6596"
+    "votes": "6628"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1289096",
@@ -3586,7 +3722,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt38793125",
     "rating": "5.7",
-    "votes": "3564"
+    "votes": "3594"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1303990",
@@ -3620,7 +3756,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt38999812",
     "rating": "4.9",
-    "votes": "555"
+    "votes": "566"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1404871",
@@ -3647,34 +3783,39 @@
  "tt39219651": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/w82vKEoYNZ9SxYxvccxO85CnZKE.jpg",
-  "mdb_score": "3.9",
+  "mdb_score": "4.0",
   "title": "The 12 Dates of Christmas (2026)",
   "synopsis": "Christina Walker, a successful shop owner who has devoted her energy to her career at the expense of her dating life, goes on 12 dates in the 12 weeks leading up to Christmas hoping to find Mr. Right.",
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt39219651",
     "rating": "5.0",
-    "votes": "1107"
+    "votes": "1149"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1329853",
     "rating": "59",
-    "votes": "126"
+    "votes": "145"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1600653",
-    "rating": "60",
-    "votes": "13"
+    "rating": "61",
+    "votes": "14"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/the-12-dates-of-christmas/",
-    "rating": "2.1",
-    "votes": "8587"
+    "rating": "2.0",
+    "votes": "9430"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/the_12_dates_of_christmas",
     "rating": null,
     "votes": null
+   },
+   "Popcorn": {
+    "url": "https://www.rottentomatoes.com/m/the_12_dates_of_christmas",
+    "rating": "34",
+    "votes": "50"
    }
   }
  },
@@ -3687,8 +3828,8 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt39313557",
-    "rating": "5.3",
-    "votes": "1311"
+    "rating": "5.4",
+    "votes": "1429"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1395439",
@@ -3715,29 +3856,29 @@
  "tt39328391": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/l05jDisMYVVpyAH3zgx1bUqPocZ.jpg",
-  "mdb_score": "7.8",
+  "mdb_score": "7.7",
   "title": "Coward (2026)",
   "synopsis": "Surrounded by brutality but bound by a tender intimacy, two World War I soldiers find a fragile sanctuary of love and art amid the shadows of the Belgian trenches.",
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt39328391",
-    "rating": "7.5",
-    "votes": "1592"
+    "rating": "7.4",
+    "votes": "1624"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1176612",
-    "rating": "79",
-    "votes": "63"
+    "rating": "78",
+    "votes": "69"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1437981",
-    "rating": "75",
-    "votes": "17"
+    "rating": "73",
+    "votes": "19"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/coward-2026/",
     "rating": "3.9",
-    "votes": "23777"
+    "votes": "26202"
    },
    "Metacritic": {
     "url": "https://www.metacritic.com/movie/coward",
@@ -3756,7 +3897,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt39370926",
     "rating": "6.1",
-    "votes": "1001"
+    "votes": "1104"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1397531",
@@ -3765,8 +3906,8 @@
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1616687",
-    "rating": "71",
-    "votes": "49"
+    "rating": "70",
+    "votes": "54"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/never-surrender-2026/",
@@ -3790,7 +3931,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt39384300",
     "rating": "6.2",
-    "votes": "583"
+    "votes": "584"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1398048",
@@ -3824,7 +3965,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt39400541",
     "rating": "6.3",
-    "votes": "827"
+    "votes": "858"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1400861",
@@ -3853,7 +3994,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt39453578",
     "rating": "6.5",
-    "votes": "1335"
+    "votes": "1394"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1399930",
@@ -3881,13 +4022,13 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt39631280",
-    "rating": "5.9",
-    "votes": "2889"
+    "rating": "5.8",
+    "votes": "2904"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1190156",
-    "rating": "64",
-    "votes": "150"
+    "rating": "63",
+    "votes": "153"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1453407",
@@ -3897,7 +4038,7 @@
    "Letterboxd": {
     "url": "https://letterboxd.com/film/gajab-raat/",
     "rating": "2.7",
-    "votes": "2284"
+    "votes": "2330"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/gajab_raat",
@@ -3916,7 +4057,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt39750664",
     "rating": "4.8",
-    "votes": "161"
+    "votes": "165"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1352952",
@@ -3931,7 +4072,7 @@
    "Letterboxd": {
     "url": "https://letterboxd.com/film/overacting/",
     "rating": "3.1",
-    "votes": "370"
+    "votes": "380"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/overacting",
@@ -3949,8 +4090,8 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt39850240",
-    "rating": "5.8",
-    "votes": "866"
+    "rating": "5.9",
+    "votes": "889"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1364109",
@@ -3979,6 +4120,50 @@
    }
   }
  },
+ "tt40210362": {
+  "mediatype": "movie",
+  "poster": "https://image.tmdb.org/t/p/w500/dS2EUbnMyfv1bWsGa6GBgzwp5cF.jpg",
+  "mdb_score": "6.0",
+  "title": "The Last Temptation of Becky (2026)",
+  "synopsis": "Now working as a field agent for the CIA, Becky is sent undercover to Poland to infiltrate a family of innkeepers running a tourist venture at The Wolf's Lair, Hitler's WWII bunker. After learning that the father, Wilhelm Reuss, is on a mission to bring about the Fourth Reich, Becky takes matters into her own hands.",
+  "ratings": {
+   "IMDb": {
+    "url": "https://www.imdb.com/title/tt40210362",
+    "rating": "6.1",
+    "votes": "266"
+   },
+   "Trakt": {
+    "url": "https://trakt.tv/movies/1357606",
+    "rating": "67",
+    "votes": "19"
+   },
+   "TMDb": {
+    "url": "https://www.themoviedb.org/movie/1642568",
+    "rating": "38",
+    "votes": "5"
+   },
+   "Letterboxd": {
+    "url": "https://letterboxd.com/film/the-last-temptation-of-becky/",
+    "rating": "3.2",
+    "votes": "763"
+   },
+   "Tomatoes": {
+    "url": "https://www.rottentomatoes.com/m/the_last_temptation_of_becky",
+    "rating": "76",
+    "votes": "37"
+   },
+   "Metacritic": {
+    "url": "https://www.metacritic.com/movie/the-last-temptation-of-becky",
+    "rating": "64",
+    "votes": "5"
+   },
+   "RogerEbert": {
+    "url": "https://www.rogerebert.com/reviews/becky-3-last-temptation-of-becky-neil-patrick-harris-movie-review-2026",
+    "rating": "2.0",
+    "votes": null
+   }
+  }
+ },
  "tt43655467": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/uTyVxPeWX8Ai30IQoyDDQONNcq.jpg",
@@ -3989,7 +4174,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt43655467",
     "rating": "5.0",
-    "votes": "14732"
+    "votes": "14846"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1381607",
@@ -4033,7 +4218,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt43739386",
     "rating": "4.2",
-    "votes": "3291"
+    "votes": "3301"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1388143",
@@ -4087,7 +4272,7 @@
    "Trakt": {
     "url": "https://trakt.tv/movies/1403734",
     "rating": "47",
-    "votes": "136"
+    "votes": "142"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1437195",
@@ -4097,7 +4282,7 @@
    "Letterboxd": {
     "url": "https://letterboxd.com/film/livestream-from-hell/",
     "rating": "1.6",
-    "votes": "4731"
+    "votes": "4852"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/livestream_from_hell",
@@ -4116,12 +4301,12 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt45858039",
     "rating": "4.0",
-    "votes": "130"
+    "votes": "131"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1401421",
-    "rating": "57",
-    "votes": "44"
+    "rating": "58",
+    "votes": "45"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1773759",
@@ -4131,7 +4316,7 @@
    "Letterboxd": {
     "url": "https://letterboxd.com/film/seriously-single-too/",
     "rating": "3.0",
-    "votes": "253"
+    "votes": "256"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/seriously_single_too",
@@ -4150,7 +4335,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt47657999",
     "rating": "5.8",
-    "votes": "925"
+    "votes": "933"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1403846",
@@ -4184,7 +4369,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt47791876",
     "rating": "7.4",
-    "votes": "131"
+    "votes": "141"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1411547",
@@ -4237,7 +4422,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt50107649",
     "rating": "5.8",
-    "votes": "397"
+    "votes": "401"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1409976",
@@ -4252,7 +4437,7 @@
    "Letterboxd": {
     "url": "https://letterboxd.com/film/dilwali-diwali/",
     "rating": "3.1",
-    "votes": "760"
+    "votes": "785"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/dilwali_diwali",
@@ -4271,22 +4456,22 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt6262770",
     "rating": "7.4",
-    "votes": "18857"
+    "votes": "19005"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1048114",
     "rating": "79",
-    "votes": "2320"
+    "votes": "2371"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1288069",
     "rating": "81",
-    "votes": "289"
+    "votes": "294"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/tenzing/",
     "rating": "3.7",
-    "votes": "38312"
+    "votes": "39038"
    },
    "Popcorn": {
     "url": "https://www.rottentomatoes.com/m/tenzing",
@@ -4314,8 +4499,8 @@
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt6611324",
-    "rating": null,
-    "votes": null
+    "rating": "6.3",
+    "votes": "1690"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1273336",
@@ -4349,7 +4534,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt7526136",
     "rating": "7.1",
-    "votes": "60977"
+    "votes": "61812"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1025172",
@@ -4358,8 +4543,8 @@
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1263337",
-    "rating": "76",
-    "votes": "973"
+    "rating": "77",
+    "votes": "1032"
    },
    "Letterboxd": {
     "url": "https://letterboxd.com/film/heart-of-the-beast-2026/",
@@ -4381,19 +4566,19 @@
  "tt9174288": {
   "mediatype": "movie",
   "poster": "https://image.tmdb.org/t/p/w500/ciHBHFWAUn9tXNpm5NfDOkcgcMx.jpg",
-  "mdb_score": "3.4",
+  "mdb_score": "3.5",
   "title": "Let's Have Kids! (2026)",
   "synopsis": "Two best friends, Emma and Phoebe, decide to get pregnant simultaneously to navigate motherhood together, but their friendship is tested when only one of them conceives.",
   "ratings": {
    "IMDb": {
     "url": "https://www.imdb.com/title/tt9174288",
     "rating": "5.2",
-    "votes": "373"
+    "votes": "379"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/1042363",
     "rating": "63",
-    "votes": "55"
+    "votes": "58"
    },
    "TMDb": {
     "url": "https://www.themoviedb.org/movie/1282159",
@@ -4403,11 +4588,55 @@
    "Letterboxd": {
     "url": "https://letterboxd.com/film/lets-have-kids/",
     "rating": "3.0",
-    "votes": "1157"
+    "votes": "1233"
    },
    "Tomatoes": {
     "url": "https://www.rottentomatoes.com/m/lets_have_kids",
     "rating": null,
+    "votes": null
+   }
+  }
+ },
+ "tt9213874": {
+  "mediatype": "movie",
+  "poster": "https://image.tmdb.org/t/p/w500/alsb3UC17kxIcytLWvwkmL0STgU.jpg",
+  "mdb_score": "6.5",
+  "title": "Breeder (2026)",
+  "synopsis": "An eccentric poodle breeder lures a broke college student to her remote ranch with a promise of research funding. But, as he soon learns, there’s a catch.",
+  "ratings": {
+   "IMDb": {
+    "url": "https://www.imdb.com/title/tt9213874",
+    "rating": "6.6",
+    "votes": "643"
+   },
+   "Trakt": {
+    "url": "https://trakt.tv/movies/1227428",
+    "rating": "61",
+    "votes": "24"
+   },
+   "TMDb": {
+    "url": "https://www.themoviedb.org/movie/1496696",
+    "rating": "50",
+    "votes": "4"
+   },
+   "Letterboxd": {
+    "url": "https://letterboxd.com/film/breeder-2026-1/",
+    "rating": "3.1",
+    "votes": "8967"
+   },
+   "Tomatoes": {
+    "url": "https://www.rottentomatoes.com/m/breeder_2026",
+    "rating": "89",
+    "votes": "44"
+   },
+   "Popcorn": {
+    "url": "https://www.rottentomatoes.com/m/breeder_2026",
+    "rating": "69",
+    "votes": "50"
+   },
+   "RogerEbert": {
+    "url": "https://www.rogerebert.com/reviews/breeder-horror-movie-review-2026",
+    "rating": "2.5",
     "votes": null
    }
   }
@@ -4422,7 +4651,7 @@
    "IMDb": {
     "url": "https://www.imdb.com/title/tt9601292",
     "rating": "4.8",
-    "votes": "3218"
+    "votes": "3233"
    },
    "Trakt": {
     "url": "https://trakt.tv/movies/993380",
